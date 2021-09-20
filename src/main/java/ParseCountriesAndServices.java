@@ -1,4 +1,3 @@
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.ParseException;
@@ -55,12 +54,15 @@ public class ParseCountriesAndServices {
     }
 
     public static void output(Map<String, Map<String, String>> countriesAndServices) {
+        System.out.println("{");
         for (String country : countriesAndServices.keySet()) {
-            System.out.println(country);
+            System.out.println("\t\"" + country + "\" : {");
             for (String serviceName : countriesAndServices.get(country).keySet()) {
-                System.out.println(serviceName + " " + countriesAndServices.get(country).get(serviceName));
+                System.out.println("\t\t\"" + serviceName + "\" : " + countriesAndServices.get(country).get(serviceName));
             }
+            System.out.println("\t},");
         }
+        System.out.println("}");
     }
 
     public static URL createUrl(String link) {
