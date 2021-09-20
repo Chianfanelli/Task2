@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args)  {
 
-        URL urlTask1 = ParseCountriesAndPhoneNumbers.createUrl(Task_URL1);
-        String resultJson1 = ParseCountriesAndPhoneNumbers.parseUrl(urlTask1);
-        ParseCountriesAndPhoneNumbers.parseCountriesJson(resultJson1);
+        URL urlTask1 = ParseCountriesAndServices.createUrl(Task_URL1);
+        String resultJson1 = ParseCountriesAndServices.parseUrl(urlTask1);
+        ParseCountriesAndServices.parseCountriesJson(resultJson1);
     }
 }

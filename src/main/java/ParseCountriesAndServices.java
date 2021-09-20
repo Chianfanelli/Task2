@@ -10,7 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
 
-public class ParseCountriesAndPhoneNumbers {
+public class ParseCountriesAndServices {
 
     public static String parseUrl(URL url) {
         if (url == null) {
